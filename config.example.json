@@ -1,0 +1,10 @@
+{
+  "appName": "Pixo AI",
+  "tagline": "Turn your ideas into images.",
+  "freeCredits": 10,
+  "rewardedAdCredits": 2,
+  "generationCost": 1,
+  "aiEndpoint": "YOUR_SECURE_BACKEND_ENDPOINT",
+  "paymentProvider": "YOUR_PAYMENT_PROVIDER",
+  "adProvider": "YOUR_APPROVED_AD_PROVIDER"
+}

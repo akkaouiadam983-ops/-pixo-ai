@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixo AI — Turn your ideas into images</title>
+<meta name="description" content="Pixo AI turns your ideas into images.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#">Pixo<span>AI</span></a>
+  <nav>
+    <a href="#generate">Generate</a><a href="#pricing">Credits</a><a href="#faq">FAQ</a>
+  </nav>
+  <button class="pill" onclick="watchAd()">🎁 Get free credits</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="badge">✨ AI IMAGE GENERATOR</div>
+  <h1>Turn your ideas<br><span>into images.</span></h1>
+  <p>Create images from simple text prompts. Start free and use your credits to create.</p>
+  <a class="cta" href="#generate">Create an image →</a>
+  <div class="stats"><div><b>Fast</b><small>Simple generation</small></div><div><b>Free start</b><small>Starter credits</small></div><div><b>History</b><small>Save your creations</small></div></div>
+</section>
+
+<section id="generate" class="generator">
+  <div class="section-head"><div><span class="eyebrow">CREATE</span><h2>Describe your image</h2></div><div class="credits">🪙 <span id="credits">10</span> credits</div></div>
+  <div class="card">
+    <textarea id="prompt" maxlength="1000" placeholder="Example: A cinematic Moroccan street at sunset, ultra detailed, realistic..."></textarea>
+    <div class="controls">
+      <select id="ratio"><option value="1:1">Square · 1:1</option><option value="16:9">Landscape · 16:9</option><option value="9:16">Portrait · 9:16</option></select>
+      <button class="generate" onclick="generate()">Generate image ✨</button>
+    </div>
+    <p class="hint">Each generation uses 1 credit.</p>
+  </div>
+  <div id="result" class="result hidden"></div>
+</section>
+
+<section class="adbox">
+  <span>ADVERTISEMENT</span>
+  <div class="ad-inner">Your ad will appear here after you connect an approved advertising provider.</div>
+  <button onclick="watchAd()">Watch ad → earn 2 credits</button>
+</section>
+
+<section id="pricing" class="pricing">
+  <span class="eyebrow">CREDITS</span><h2>Choose your plan</h2>
+  <div class="plans">
+    <article><h3>Starter</h3><strong>50 credits</strong><p>For trying Pixo AI.</p><button onclick="buy('Starter')">Choose</button></article>
+    <article class="featured"><div class="popular">POPULAR</div><h3>Creator</h3><strong>200 credits</strong><p>For regular creators.</p><button onclick="buy('Creator')">Choose</button></article>
+    <article><h3>Pro</h3><strong>500 credits</strong><p>For heavy use.</p><button onclick="buy('Pro')">Choose</button></article>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+<span class="eyebrow">FAQ</span><h2>Questions</h2>
+<details><summary>Is Pixo AI free?</summary><p>New visitors receive starter credits. More credits can be earned through approved rewarded ads or purchased when payments are connected.</p></details>
+<details><summary>Are the generated images real AI images?</summary><p>This starter package is ready to connect to a real image-generation API. The API endpoint is configured in <code>app.js</code>.</p></details>
+<details><summary>How do I earn money?</summary><p>Connect an approved advertising provider and payment provider. Never fake ad views or rewards.</p></details>
+</section>
+</main>
+
+<footer><b>Pixo AI</b><span>Turn your ideas into images.</span><span>© 2026 Pixo AI</span></footer>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
